@@ -4,12 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garden Advice</title>
+    <title>South African Garden Advice App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Garden Advice Program</h1>
-    <p>Check the browser console for gardening advice based on the hardcoded season and plant type.</p>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 South African Garden Advisor</h1>
+            <p>Get gardening tips for South African plants for every season</p>
+        </div>
+
+        <div class="form-container">
+            <form id="garden-form">
+                <div class="form-group">
+                    <label for="season">🌤️ Select Your Current Season:</label>
+                    <select id="season" name="season" required>
+                        <option value="">Choose a season...</option>
+                        <option value="spring">🌸 Spring</option>
+                        <option value="summer">☀️ Summer</option>
+                        <option value="autumn">🍂 Autumn</option>
+                        <option value="winter">❄️ Winter</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="plant-type">🌿 Select Your Plant:</label>
+                    <select id="plant-type" name="plant-type" required>
+                        <option value="">First, choose a season above...</option>
+                    </select>
+                    <div class="form-hint">
+                        <small>💡 Tip: Choose a season first to see South African plants for that time of year!</small>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Get My South African Garden Advice! 🌱
+                </button>
+            </form>
+
+            <div id="advice-container"></div>
+        </div>
+    </div>
+
     <!-- Link the JavaScript file -->
     <script src="garden_advice.js"></script>
 </body>
